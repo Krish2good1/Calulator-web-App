@@ -68,7 +68,7 @@ button {
     background-color: #f0f0f0;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    border-radius: 50%;
+    border-radius: 0%;
 }
 
 button:hover {
@@ -107,4 +107,32 @@ button:hover {
     height: 1px;
     background-color: black;
     margin: 10px 0;
+}
+
+/* Media query for tablets (768px and smaller) */
+@media (max-width: 768px) {
+    button {
+        flex: 1;
+        height: 11.5vh;
+        font-size: 5vw;
+        border: none;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border-radius: 50%;
+    }
+}
+
+/* Media query for mobile devices (480px and smaller) */
+@media (max-width: 480px) {
+    button {
+        flex: 1;
+        height: 11.5vh;
+        font-size: 5vw;
+        border: none;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border-radius: 50%;
+    }   
 }

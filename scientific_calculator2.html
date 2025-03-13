@@ -7,7 +7,7 @@
     <title>Scientific Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="cal.svg">
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,12 +24,13 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             width: 90vw;
-            height: 104vh;
-            padding: 20px;
+            height: 100vh;
+            padding: 10px;
             backdrop-filter: blur(10px);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            overflow: auto;
         }
 
         nav {
@@ -79,6 +80,7 @@
             background-color: #f0f0f0;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 0px;
         }
 
         button:hover {
@@ -102,7 +104,7 @@
         .buttons {
             display: flex;
             flex-direction: column;
-            gap: 15px; /* Increased gap to fix spacing */
+            gap: 10px;
         }
 
         .result-container {
@@ -112,11 +114,39 @@
             flex-shrink: 0;
         }
 
-        .divider {
-            width: 100%;
-            height: 1px;
-            background-color: black;
-            margin: 10px 0;
+        .responsive-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+}
+
+        /* Media query for tablets (768px and smaller) */
+        @media (max-width: 768px) {
+            button {
+                flex: 1;
+                height: 11.5vh;
+                font-size: 5vw;
+                border: none;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                border-radius: 50%;
+            }
+        }
+
+        /* Media query for mobile devices (480px and smaller) */
+        @media (max-width: 480px) {
+            button {
+                flex: 1;
+                height: 11.5vh;
+                font-size: 5vw;
+                border: none;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                border-radius: 50%;
+            }
         }
     </style>
 </head>
@@ -126,7 +156,7 @@
     <div class="calculator-container">
         <div class="calculator">
             <div class="result-container">
-                <input type="text" id="result" class="result-display" placeholder="Enter Value in radian" readonly >
+                <input type="text" id="result" class="result-display" placeholder="Enter Value in radian" readonly>
                 <button onclick="clearResult()"><img src="delete-left-solid.svg" alt="Backspace"></button>
             </div>
 
@@ -148,7 +178,7 @@
                 </button>
             </nav>
 
-            <div style="width: 290px; height: 1px; background-color: black;">.</div>
+            <div class="responsive-line">.</div>
 
             <div class="buttons">
                 <div class="button-row">

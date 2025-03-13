@@ -24,11 +24,12 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             width: 90vw;
             height: 100vh;
-            padding: 20px;
+            padding: 10px;
             backdrop-filter: blur(10px);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            overflow: auto;
         }
 
         nav {
@@ -78,6 +79,7 @@
             background-color: #f0f0f0;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 0px;
         }
 
         button:hover {
@@ -111,12 +113,39 @@
             flex-shrink: 0;
         }
 
-        .divider {
-            width: 100%;
-            height: 1px;
-            background-color: black;
-            margin: 15px 0;
-            /* Added vertical spacing */
+        .responsive-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+}
+
+        /* Media query for tablets (768px and smaller) */
+        @media (max-width: 768px) {
+            button {
+                flex: 1;
+                height: 11.5vh;
+                font-size: 5vw;
+                border: none;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                border-radius: 50%;
+            }
+        }
+
+        /* Media query for mobile devices (480px and smaller) */
+        @media (max-width: 480px) {
+            button {
+                flex: 1;
+                height: 11.5vh;
+                font-size: 5vw;
+                border: none;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                border-radius: 50%;
+            }
         }
     </style>
 
@@ -150,7 +179,7 @@
                 </button>
             </nav>
 
-            <div class="divider">.</div>
+            <div class="responsive-line">.</div>
 
             <div class="buttons">
                 <div class="button-row">
