@@ -6,9 +6,16 @@ function appendValue(value) {
     result.value += value;
 }
 
-function clearResult() {
-    document.getElementById('result').value = '';
+function clearAll() {
+    const resultInput = document.getElementById("result");
+    resultInput.value = '';
 }
+
+function clearResult() {
+    const resultInput = document.getElementById("result");
+    resultInput.value = resultInput.value.slice(0, -1); // Remove the last character
+}
+
 
 function calculateResult() {
     const result = document.getElementById('result');

@@ -114,11 +114,11 @@
         }
 
         .responsive-line {
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    margin: 10px 0;
-}
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin: 10px 0;
+        }
 
         /* Media query for tablets (768px and smaller) */
         @media (max-width: 768px) {
@@ -156,7 +156,7 @@
     <div class="calculator-container">
         <div class="calculator">
             <div class="result-container">
-                <input type="text" id="result" class="result-display" placeholder="Enter Value in Radian" readonly>
+                <input type="text" id="result" class="result-display" placeholder="Enter a Value" readonly>
                 <button onclick="clearResult()"><img src="delete-left-solid.svg" alt="Backspace"></button>
             </div>
 
@@ -164,7 +164,7 @@
                 <button onclick="window.location.href='history.html'">
                     <img src="history-solid.svg" alt="History">
                 </button>
-                <button onclick="window.location.href='more_meserment.html'">
+                <button onclick="window.location.href='more_measurement.html'">
                     <img src="scale-balanced-solid.svg" alt="Measurement">
                 </button>
                 <button onclick="window.location.href='index.html'">
@@ -173,7 +173,6 @@
                 <button onclick="window.location.href='ai.html'">
                     <img src="ai.png" alt="AI">
                 </button>
-                <!-- New Swap Button -->
                 <button onclick="window.location.href='scientific_calculator2.html'">
                     <img src="swap.svg" alt="Swap">
                 </button>
@@ -183,10 +182,10 @@
 
             <div class="buttons">
                 <div class="button-row">
+                    <button onclick="clearAll('(')" style="color: red;">C</button>
                     <button onclick="appendValue('sin(')">sin</button>
                     <button onclick="appendValue('cos(')">cos</button>
-                    <button onclick="appendValue('tan(')">tan</button>
-                    <button onclick="appendValue('^')">x^y</button>
+                    <button onclick="appendValue('tan(')">tan</button>    
                 </div>
                 <div class="button-row">
                     <button onclick="appendValue('log(')">log</button>
