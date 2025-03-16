@@ -229,3 +229,35 @@ function convertTime() {
 
     document.querySelector(".output").value = result.toFixed(2);
 }
+
+
+document.addEventListener('keydown', function (event) {
+    const result = document.getElementById('result');
+    if (!result) return;
+
+    // Handle numeric input
+    if (event.key >= '0' && event.key <= '9') {
+        event.preventDefault();
+        appendValue(event.key);
+    } 
+   // Handle Enter key for calculating the result
+    else if (event.key === 'Enter') {
+        event.preventDefault();
+        calculateResult();
+    } 
+    // Handle Backspace for removing the last character
+    else if (event.key === 'Backspace') {
+        event.preventDefault();
+        clearResult();
+    } 
+    // Handle decimal point
+    else if (event.key === '.') {
+        event.preventDefault();
+        appendValue('.');
+    } 
+    // Handle Escape key for clearing all input
+    else if (event.key === 'Escape') {
+        event.preventDefault();
+        clearAll();
+    }
+});
